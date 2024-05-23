@@ -111,9 +111,9 @@ jobs:
         ARM_SUBSCRIPTION_ID: ${{ secrets.subscriptionId }}
         ARM_TENANT_ID: ${{ secrets.tenantId }}
     - name: create-tfstate-storage-account
-      uses: azure/CLI@v1
+      uses: azure/CLI@v2
       with:
-        azcliversion: 2.30.0
+        azcliversion: 2.61.0
         #
         inlineScript: |
           az account set -s ${{ env.ARM_SUBSCRIPTION_ID  }}
@@ -124,9 +124,9 @@ jobs:
         ARM_SUBSCRIPTION_ID: ${{ secrets.subscriptionId }}
         ARM_TENANT_ID: ${{ secrets.tenantId }}    
     - name: create-tfstate-storage-container
-      uses: azure/CLI@v1
+      uses: azure/CLI@v2
       with:
-        azcliversion: 2.30.0
+        azcliversion: 2.61.0
         #
         inlineScript: |
           az account set -s ${{ env.ARM_SUBSCRIPTION_ID  }}
