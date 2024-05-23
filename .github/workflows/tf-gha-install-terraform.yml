@@ -98,9 +98,9 @@ jobs:
       env: 
         AZURE_CREDENTIALS: ${{ secrets.azure_creds }}
     - name: create-tfstate-resource-group
-      uses: azure/CLI@v1
+      uses: azure/CLI@v2
       with:
-        azcliversion: 2.30.0
+        azcliversion: 2.61.0
         #
         inlineScript: |
           az account set -s ${{ env.ARM_SUBSCRIPTION_ID  }}
